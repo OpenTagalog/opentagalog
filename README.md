@@ -1,6 +1,6 @@
 Open Tagalog is an Open Educational Resource (OER).
 
-**Making Tagalog accessible to everyone.**
+**Making Tagalog accessible to everyone, everywhere.**
 
 A free and open educational platform for learning Tagalog.
 
