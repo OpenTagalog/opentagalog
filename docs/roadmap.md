@@ -46,3 +46,18 @@ The platform consists of three integrated parts:
 - Printable worksheets.
 - Downloadable PDFs.
 - Dark mode.
+
+## Guiding Principles
+
+OpenTagalog should always be:
+
+- Free
+- Open source
+- Accessible
+- Beginner-friendly
+- Mobile-first
+- Fast
+- Offline-friendly where practical
+- Community-driven
+- Easy to maintain
+- Easy to extend
