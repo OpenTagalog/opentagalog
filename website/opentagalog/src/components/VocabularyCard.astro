@@ -1,0 +1,40 @@
+---
+import AudioButton from "./AudioButton.astro";
+
+const {
+  tagalog,
+  english,
+  pronunciation
+} = Astro.props;
+---
+
+<div class="card">
+  <h3>{tagalog}</h3>
+
+  <AudioButton text={tagalog} />
+
+  <p class="pronunciation">
+    &#128266; {pronunciation}
+  </p>
+
+  <p>
+    {english}
+  </p>
+</div>
+
+<style>
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.pronunciation {
+  font-style: italic;
+}
+</style>

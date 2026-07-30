@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import LessonCard from "../../components/LessonCard.astro";
+
+const lessons = await getCollection("lessons");
+---
+
+<html lang="en">
+  <head>
+    <title>Tagalog Lessons</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>Tagalog Lessons</h1>
+
+      <p>
+        Learn Tagalog step by step.
+      </p>
+
+      {
+        lessons.map((lesson) => (
+          <LessonCard
+            title={lesson.data.title}
+            description={lesson.data.description}
+            level={lesson.data.level}
+            slug={lesson.id}
+          />
+        ))
+      }
+    </main>
+  </body>
+</html>

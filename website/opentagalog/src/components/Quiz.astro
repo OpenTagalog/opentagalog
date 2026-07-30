@@ -1,0 +1,29 @@
+---
+const {
+ question,
+ answer
+} = Astro.props;
+---
+
+<div class="quiz">
+
+<p>
+<strong>{question}</strong>
+</p>
+
+<button onclick="showAnswer()">
+Show answer
+</button>
+
+<p id="answer" hidden>
+{answer}
+</p>
+
+</div>
+
+
+<script is:inline>
+function showAnswer() {
+ document.getElementById("answer").hidden = false;
+}
+</script>

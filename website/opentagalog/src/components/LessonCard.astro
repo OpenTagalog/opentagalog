@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  level: string;
+  slug: string;
+}
+
+const { title, description, level, slug } = Astro.props;
+---
+
+<article class="lesson-card">
+  <h2>
+    <a href={`/lessons/${slug}`}>
+      {title}
+    </a>
+  </h2>
+
+  <p>{description}</p>
+
+  <span>{level}</span>
+</article>
+
+<style>
+  .lesson-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+</style>

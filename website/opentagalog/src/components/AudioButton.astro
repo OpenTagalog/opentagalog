@@ -1,0 +1,18 @@
+---
+const { text } = Astro.props;
+---
+
+<button onclick={`speak('${text}')`}>
+  &#128266; Listen
+</button>
+
+<script is:inline>
+function speak(text) {
+  const speech = new SpeechSynthesisUtterance(text);
+
+  speech.lang = "fil-PH";
+  speech.rate = 0.8;
+
+  speechSynthesis.speak(speech);
+}
+</script>

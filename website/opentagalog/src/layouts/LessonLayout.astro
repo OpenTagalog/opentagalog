@@ -1,0 +1,70 @@
+---
+const {
+  title,
+  level,
+  description,
+} = Astro.props;
+---
+
+<article class="lesson">
+  <header>
+    <h1>{title}</h1>
+
+    <p class="level">
+      Level: {level}
+    </p>
+
+    <p class="description">
+      {description}
+    </p>
+  </header>
+
+  <hr />
+
+  <section class="lesson-content">
+    <slot />
+  </section>
+</article>
+
+<style>
+  .lesson {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    line-height: 1.7;
+  }
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .level {
+    font-weight: bold;
+  }
+
+  .description {
+    color: #666;
+  }
+
+  .lesson-content {
+    margin-top: 2rem;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+  }
+
+  blockquote {
+    border-left: 4px solid #888;
+    padding-left: 1rem;
+    font-style: italic;
+  }
+</style>
